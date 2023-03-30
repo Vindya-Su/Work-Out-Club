@@ -1,90 +1,89 @@
 //
-//  SignUp.swift
+//  SignIn.swift
 //  Work Out Club
 //
-//  Created by Vindya Sunali on 2023-03-27.
+//  Created by Vindya Sunali on 2023-03-29.
 //
 
 import UIKit
 
-class SignUp: UIViewController {
+class SignIn: UIViewController {
+    
     
     let ImageSignUp: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "singUpImage"))
+        let imageView = UIImageView(image: UIImage(named: "SignIn"))
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     let GmailLoginButton: UIButton = {
-            let button = UIButton()
-            button.setTitle(" Continue with Google", for: .normal)
-            button.backgroundColor = UIColor(red: 201/255, green: 193/255, blue: 197/255, alpha: 0.27)
-            button.setTitleColor(.black, for: .normal)
-            button.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
-            button.layer.cornerRadius = 20
-            button.setImage(UIImage(named:  "google"), for: .normal)
-            button.translatesAutoresizingMaskIntoConstraints = false
-            return button
+        let button = UIButton()
+        button.setTitle(" Continue with Google", for: .normal)
+        button.backgroundColor = UIColor(red: 201/255, green: 193/255, blue: 197/255, alpha: 0.27)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
+        button.layer.cornerRadius = 20
+        button.setImage(UIImage(named:  "google"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     let AppleIdLoginButton: UIButton = {
-            let button = UIButton()
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.setImage(UIImage(named:"apple"), for: .normal)
-            button.setTitle(" Continue with Apple", for: .normal)
-            button.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
-            button.backgroundColor = UIColor(red: 201/255, green: 193/255, blue: 197/255, alpha: 0.27)
-            button.setTitleColor(.black, for: .normal)
-            button.layer.cornerRadius = 20
-            return button
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named:"apple"), for: .normal)
+        button.setTitle(" Continue with Apple", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
+        button.backgroundColor = UIColor(red: 201/255, green: 193/255, blue: 197/255, alpha: 0.27)
+        button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = 20
+        return button
     }()
     
     let SignUpButton: UIButton = {
-            let button = UIButton(type: .system)
-            button.setTitle("Sign Up", for: .normal)
-            button.backgroundColor = .brown
-            button.setTitleColor(.white, for: .normal)
-            button.layer.cornerRadius = 30
-            button.translatesAutoresizingMaskIntoConstraints = false
-            return button
+        let button = UIButton(type: .system)
+        button.setTitle("Sign In", for: .normal)
+        button.backgroundColor = .brown
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 30
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     let labelAlreadyLogin : UILabel = {
-            let label = UILabel()
-            label.translatesAutoresizingMaskIntoConstraints = false
-            label.font = .systemFont(ofSize: 16)
-            label.textColor = .black
-            label.text = "Already have an account?"
-            label.textAlignment = .center
-            return label
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 16)
+        label.textColor = .black
+        label.text = "Already have an account?"
+        label.textAlignment = .center
+        return label
     }()
     
     let AlreadyLoginButton: UIButton = {
-            let button = UIButton(type: .system)
-            button.setTitle("Sign In", for: .normal)
-            button.setTitleColor(.black, for: .normal)
-            button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
-            button.layer.cornerRadius = 5
-            button.translatesAutoresizingMaskIntoConstraints = false
-            return button
+        let button = UIButton(type: .system)
+        button.setTitle("Sign In", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
+        button.layer.cornerRadius = 5
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     let hStack : UIStackView = {
-            let stack = UIStackView()
-            stack.translatesAutoresizingMaskIntoConstraints = false
-            stack.axis = .horizontal
-            stack.spacing = 5
-            return stack
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .horizontal
+        stack.spacing = 5
+        return stack
     }()
-
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setUi()
         
+        setUi()
     }
     
     func setUi(){
@@ -95,10 +94,10 @@ class SignUp: UIViewController {
         view.addSubview(SignUpButton)
         view.addSubview(hStack)
         
+        
         hStack.addArrangedSubview(labelAlreadyLogin)
         hStack.addArrangedSubview(AlreadyLoginButton)
         
-        AlreadyLoginButton.addTarget(self, action: #selector(SignInPage), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             
@@ -126,10 +125,4 @@ class SignUp: UIViewController {
         ])
         
     }
-    
-    @objc func SignInPage(){
-            navigationController?.pushViewController(SignIn(), animated: true)
-        }
-    
-
 }

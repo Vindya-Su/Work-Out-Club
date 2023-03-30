@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		200479BF29D2036500990591 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200479BE29D2036500990591 /* SignUp.swift */; };
+		200479C129D3768100990591 /* ThirdPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200479C029D3768100990591 /* ThirdPage.swift */; };
+		200479C329D434A300990591 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200479C229D434A200990591 /* SignIn.swift */; };
+		200479C529D55F9E00990591 /* FourthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200479C429D55F9E00990591 /* FourthPage.swift */; };
+		200479C729D5719700990591 /* FifthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200479C629D5719700990591 /* FifthPage.swift */; };
 		20B6A2E229D17B9D00CFC7D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6A2E129D17B9D00CFC7D8 /* AppDelegate.swift */; };
 		20B6A2E429D17B9D00CFC7D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6A2E329D17B9D00CFC7D8 /* SceneDelegate.swift */; };
 		20B6A2E629D17B9D00CFC7D8 /* ScreenStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6A2E529D17B9D00CFC7D8 /* ScreenStart.swift */; };
@@ -17,6 +21,10 @@
 
 /* Begin PBXFileReference section */
 		200479BE29D2036500990591 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		200479C029D3768100990591 /* ThirdPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPage.swift; sourceTree = "<group>"; };
+		200479C229D434A200990591 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		200479C429D55F9E00990591 /* FourthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthPage.swift; sourceTree = "<group>"; };
+		200479C629D5719700990591 /* FifthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthPage.swift; sourceTree = "<group>"; };
 		20B6A2DE29D17B9D00CFC7D8 /* Work Out Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Work Out Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B6A2E129D17B9D00CFC7D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20B6A2E329D17B9D00CFC7D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +78,10 @@
 			children = (
 				20B6A2E529D17B9D00CFC7D8 /* ScreenStart.swift */,
 				200479BE29D2036500990591 /* SignUp.swift */,
+				200479C029D3768100990591 /* ThirdPage.swift */,
+				200479C229D434A200990591 /* SignIn.swift */,
+				200479C429D55F9E00990591 /* FourthPage.swift */,
+				200479C629D5719700990591 /* FifthPage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,7 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				200479C729D5719700990591 /* FifthPage.swift in Sources */,
+				200479C529D55F9E00990591 /* FourthPage.swift in Sources */,
 				20B6A2E629D17B9D00CFC7D8 /* ScreenStart.swift in Sources */,
+				200479C329D434A300990591 /* SignIn.swift in Sources */,
+				200479C129D3768100990591 /* ThirdPage.swift in Sources */,
 				200479BF29D2036500990591 /* SignUp.swift in Sources */,
 				20B6A2E229D17B9D00CFC7D8 /* AppDelegate.swift in Sources */,
 				20B6A2E429D17B9D00CFC7D8 /* SceneDelegate.swift in Sources */,

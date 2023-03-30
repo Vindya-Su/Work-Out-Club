@@ -36,7 +36,7 @@ class ScreenStart: UIViewController {
     let labelWelcome : UILabel = {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 24, weight: .bold)
+            label.font = .systemFont(ofSize: 24, weight: .bold)
             label.textColor = .black
             label.text = "WELCOME"
             label.textAlignment = .center
@@ -63,6 +63,34 @@ class ScreenStart: UIViewController {
             return button
     }()
     
+    let labelAlreadyLogin : UILabel = {
+            let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.font = .systemFont(ofSize: 16)
+            label.textColor = .black
+            label.text = "Already have an account?"
+            label.textAlignment = .center
+            return label
+    }()
+    
+    let AlreadyLoginButton: UIButton = {
+            let button = UIButton(type: .system)
+            button.setTitle("Sign In", for: .normal)
+            button.setTitleColor(.black, for: .normal)
+            button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
+            button.layer.cornerRadius = 5
+            button.translatesAutoresizingMaskIntoConstraints = false
+            return button
+    }()
+    
+    let hStack : UIStackView = {
+            let stack = UIStackView()
+            stack.translatesAutoresizingMaskIntoConstraints = false
+            stack.axis = .horizontal
+            stack.spacing = 5
+            return stack
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,8 +106,13 @@ class ScreenStart: UIViewController {
         view.addSubview(labelLoginApp)
         view.addSubview(StartedButton)
         view.addSubview(logo)
+        view.addSubview(hStack)
+        
+        hStack.addArrangedSubview(labelAlreadyLogin)
+        hStack.addArrangedSubview(AlreadyLoginButton)
         
         StartedButton.addTarget(self, action: #selector(GetStarted), for: .touchUpInside)
+        AlreadyLoginButton.addTarget(self, action: #selector(SignInPage), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             
@@ -105,15 +138,22 @@ class ScreenStart: UIViewController {
             labelLoginApp.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             labelLoginApp.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 10),
                     
-            StartedButton.topAnchor.constraint(equalTo: labelLoginApp.topAnchor, constant: 500),
+            StartedButton.topAnchor.constraint(equalTo: labelLoginApp.topAnchor, constant: 380),
             StartedButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 80),
             StartedButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -80),
-            StartedButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
+            StartedButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -140),
+            
+            hStack.topAnchor.constraint(equalTo: StartedButton.topAnchor, constant: 60),
+            hStack.centerXAnchor.constraint(equalTo: view.centerXAnchor)
          ])
     }
     
     @objc func GetStarted(){
             navigationController?.pushViewController(SignUp(), animated: true)
+        }
+    
+    @objc func SignInPage(){
+            navigationController?.pushViewController(SignIn(), animated: true)
         }
 
 }
