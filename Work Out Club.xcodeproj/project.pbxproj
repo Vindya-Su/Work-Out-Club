@@ -15,6 +15,14 @@
 		209630602A13F2CA00B678C8 /* SixthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2096305F2A13F2CA00B678C8 /* SixthPage.swift */; };
 		209630622A13F2FE00B678C8 /* SeventhPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209630612A13F2FE00B678C8 /* SeventhPage.swift */; };
 		209630642A15189D00B678C8 /* GoalPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209630632A15189D00B678C8 /* GoalPage.swift */; };
+		209630662A1561F400B678C8 /* YTPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209630652A1561F400B678C8 /* YTPage.swift */; };
+		209630692A15F13000B678C8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 209630682A15F13000B678C8 /* SnapKit */; };
+		2096306B2A15F8C600B678C8 /* PlanPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2096306A2A15F8C600B678C8 /* PlanPage.swift */; };
+		2096306D2A15FD1400B678C8 /* ThankYouPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2096306C2A15FD1400B678C8 /* ThankYouPage.swift */; };
+		2096306F2A162F6E00B678C8 /* BMIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2096306E2A162F6E00B678C8 /* BMIController.swift */; };
+		209630712A16731600B678C8 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209630702A16731600B678C8 /* TableView.swift */; };
+		209630732A1684C900B678C8 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209630722A1684C900B678C8 /* CustomCell.swift */; };
+		209630772A16A87600B678C8 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209630762A16A87600B678C8 /* ProfilePage.swift */; };
 		20B6A2E229D17B9D00CFC7D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6A2E129D17B9D00CFC7D8 /* AppDelegate.swift */; };
 		20B6A2E429D17B9D00CFC7D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6A2E329D17B9D00CFC7D8 /* SceneDelegate.swift */; };
 		20B6A2E629D17B9D00CFC7D8 /* ScreenStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6A2E529D17B9D00CFC7D8 /* ScreenStart.swift */; };
@@ -31,6 +39,13 @@
 		2096305F2A13F2CA00B678C8 /* SixthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthPage.swift; sourceTree = "<group>"; };
 		209630612A13F2FE00B678C8 /* SeventhPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventhPage.swift; sourceTree = "<group>"; };
 		209630632A15189D00B678C8 /* GoalPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalPage.swift; sourceTree = "<group>"; };
+		209630652A1561F400B678C8 /* YTPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTPage.swift; sourceTree = "<group>"; };
+		2096306A2A15F8C600B678C8 /* PlanPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanPage.swift; sourceTree = "<group>"; };
+		2096306C2A15FD1400B678C8 /* ThankYouPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouPage.swift; sourceTree = "<group>"; };
+		2096306E2A162F6E00B678C8 /* BMIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIController.swift; sourceTree = "<group>"; };
+		209630702A16731600B678C8 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		209630722A1684C900B678C8 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		209630762A16A87600B678C8 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		20B6A2DE29D17B9D00CFC7D8 /* Work Out Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Work Out Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B6A2E129D17B9D00CFC7D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20B6A2E329D17B9D00CFC7D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209630692A15F13000B678C8 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +91,7 @@
 				20B6A2EA29D17B9E00CFC7D8 /* Assets.xcassets */,
 				20B6A2EC29D17B9E00CFC7D8 /* LaunchScreen.storyboard */,
 				20B6A2EF29D17B9E00CFC7D8 /* Info.plist */,
+				209630722A1684C900B678C8 /* CustomCell.swift */,
 			);
 			path = "Work Out Club";
 			sourceTree = "<group>";
@@ -91,6 +108,12 @@
 				2096305F2A13F2CA00B678C8 /* SixthPage.swift */,
 				209630612A13F2FE00B678C8 /* SeventhPage.swift */,
 				209630632A15189D00B678C8 /* GoalPage.swift */,
+				209630652A1561F400B678C8 /* YTPage.swift */,
+				2096306A2A15F8C600B678C8 /* PlanPage.swift */,
+				2096306C2A15FD1400B678C8 /* ThankYouPage.swift */,
+				2096306E2A162F6E00B678C8 /* BMIController.swift */,
+				209630702A16731600B678C8 /* TableView.swift */,
+				209630762A16A87600B678C8 /* ProfilePage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +143,9 @@
 			dependencies = (
 			);
 			name = "Work Out Club";
+			packageProductDependencies = (
+				209630682A15F13000B678C8 /* SnapKit */,
+			);
 			productName = "Work Out Club";
 			productReference = 20B6A2DE29D17B9D00CFC7D8 /* Work Out Club.app */;
 			productType = "com.apple.product-type.application";
@@ -148,6 +174,9 @@
 				Base,
 			);
 			mainGroup = 20B6A2D529D17B9D00CFC7D8;
+			packageReferences = (
+				209630672A15F13000B678C8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 20B6A2DF29D17B9D00CFC7D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -174,15 +203,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209630772A16A87600B678C8 /* ProfilePage.swift in Sources */,
 				200479C729D5719700990591 /* FifthPage.swift in Sources */,
 				200479C529D55F9E00990591 /* FourthPage.swift in Sources */,
+				209630732A1684C900B678C8 /* CustomCell.swift in Sources */,
 				20B6A2E629D17B9D00CFC7D8 /* ScreenStart.swift in Sources */,
 				200479C329D434A300990591 /* SignIn.swift in Sources */,
 				200479C129D3768100990591 /* ThirdPage.swift in Sources */,
 				200479BF29D2036500990591 /* SignUp.swift in Sources */,
 				20B6A2E229D17B9D00CFC7D8 /* AppDelegate.swift in Sources */,
+				2096306D2A15FD1400B678C8 /* ThankYouPage.swift in Sources */,
+				2096306F2A162F6E00B678C8 /* BMIController.swift in Sources */,
+				2096306B2A15F8C600B678C8 /* PlanPage.swift in Sources */,
 				209630602A13F2CA00B678C8 /* SixthPage.swift in Sources */,
 				209630622A13F2FE00B678C8 /* SeventhPage.swift in Sources */,
+				209630662A1561F400B678C8 /* YTPage.swift in Sources */,
+				209630712A16731600B678C8 /* TableView.swift in Sources */,
 				20B6A2E429D17B9D00CFC7D8 /* SceneDelegate.swift in Sources */,
 				209630642A15189D00B678C8 /* GoalPage.swift in Sources */,
 			);
@@ -392,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		209630672A15F13000B678C8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		209630682A15F13000B678C8 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 209630672A15F13000B678C8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 20B6A2D629D17B9D00CFC7D8 /* Project object */;
 }

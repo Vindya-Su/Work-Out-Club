@@ -11,7 +11,7 @@ class SixthPage: UIViewController {
     
     let progressView : UIProgressView = {
         let progressView = UIProgressView(progressViewStyle: .bar)
-        progressView.setProgress(4/6, animated: true)
+        progressView.setProgress(4/7, animated: true)
         progressView.trackTintColor = UIColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 1.0)
         progressView.progressTintColor = UIColor(red: 255/255, green: 108/255, blue: 7/255, alpha: 0.27)
         return progressView
