@@ -27,13 +27,25 @@ class SixthPage: UIViewController {
         return label
     }()
     
+    let labelText : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 20)
+        label.textColor = .gray
+        label.text = "Please enter your weight below (KG)"
+        label.textAlignment = .left
+        return label
+    }()
+    
     let textFirstName : UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         //textField.borderStyle = .roundedRect
-        textField.placeholder = "0"
+        //textField.placeholder = "0"
+        textField.layer.borderWidth = 1.5
+        textField.layer.cornerRadius = 8
         textField.font = .systemFont(ofSize: 38, weight: .bold)
-        textField.textAlignment = .center
+        //textField.textAlignment = .center
         return textField
     }()
     
@@ -42,7 +54,7 @@ class SixthPage: UIViewController {
         button.setTitle("Continue", for: .normal)
         button.backgroundColor = .brown
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
+        button.titleLabel?.font = .systemFont(ofSize: 22, weight: .bold)
         button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -59,6 +71,7 @@ class SixthPage: UIViewController {
         view.addSubview(progressView)
         view.addSubview(labelName)
         view.addSubview(textFirstName)
+        view.addSubview(labelText)
         view.addSubview(ContinueButton)
         
         progressView.frame = CGRect(x: (view.frame.size.width)/8, y: 100, width: view.frame.size.width-100, height: 20)
@@ -70,9 +83,13 @@ class SixthPage: UIViewController {
         labelName.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
         labelName.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
         
-        textFirstName.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 200),
-        textFirstName.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-        textFirstName.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+        labelText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 200),
+        labelText.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+        labelText.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+        
+        textFirstName.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 250),
+        textFirstName.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 80),
+        textFirstName.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -80),
         
         ContinueButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 460),
         ContinueButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 60),
@@ -83,6 +100,13 @@ class SixthPage: UIViewController {
     }
     
     @objc func Continue(){
+        
+        let wString = textFirstName.text!
+        
+        let wDouble = Double(wString)
+        
+        let data = UserDefaults.standard
+                data.set(wDouble, forKey: "weight")
             navigationController?.pushViewController(SeventhPage(), animated: true)
         }
     

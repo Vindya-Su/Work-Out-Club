@@ -42,7 +42,7 @@ class FourthPage: UIViewController {
         button.setTitle("Continue", for: .normal)
         button.backgroundColor = .brown
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
+        button.titleLabel?.font = .systemFont(ofSize: 22, weight: .bold)
         button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
         return button

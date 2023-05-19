@@ -31,7 +31,7 @@ class GoalPage: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("  Lose weight", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.titleLabel?.font = .systemFont(ofSize: 18.5)
         button.backgroundColor = UIColor(red: 201/255, green: 193/255, blue: 197/255, alpha: 0.27)
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 20
@@ -42,7 +42,7 @@ class GoalPage: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("  Get toned", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.titleLabel?.font = .systemFont(ofSize: 18.5)
         button.backgroundColor = UIColor(red: 201/255, green: 193/255, blue: 197/255, alpha: 0.27)
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 20
@@ -53,7 +53,7 @@ class GoalPage: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("  Muscle gain", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.titleLabel?.font = .systemFont(ofSize: 18.5)
         button.backgroundColor = UIColor(red: 201/255, green: 193/255, blue: 197/255, alpha: 0.27)
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 20
@@ -64,7 +64,7 @@ class GoalPage: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("  Improved fitness and endurance", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.titleLabel?.font = .systemFont(ofSize: 18.5)
         button.backgroundColor = UIColor(red: 201/255, green: 193/255, blue: 197/255, alpha: 0.27)
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 20
@@ -75,18 +75,30 @@ class GoalPage: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("  Increased strength", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.titleLabel?.font = .systemFont(ofSize: 18.5)
         button.backgroundColor = UIColor(red: 201/255, green: 193/255, blue: 197/255, alpha: 0.27)
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 20
         return button
     }()
     
+    
     let ImgGoal: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "GoalImage"))
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
+    }()
+    
+    let ContinueButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Continue", for: .normal)
+        button.backgroundColor = .brown
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 22, weight: .bold)
+        button.layer.cornerRadius = 10
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     override func viewDidLoad() {
@@ -105,15 +117,18 @@ class GoalPage: UIViewController {
         view.addSubview(GoalFourButton)
         view.addSubview(GoalFiveButton)
         view.addSubview(ImgGoal)
+        view.addSubview(ContinueButton)
         
         
         progressView.frame = CGRect(x: (view.frame.size.width)/8, y: 100, width: view.frame.size.width-100, height: 20)
         
-        GoalOneButton.addTarget(self, action: #selector(GoalOneLogin), for: .touchUpInside)
-        GoalTwoButton.addTarget(self, action: #selector(GoalTwoLogin), for: .touchUpInside)
-        GoalThreeButton.addTarget(self, action: #selector(GoalThreeLogin), for: .touchUpInside)
-        GoalFourButton.addTarget(self, action: #selector(GoalFourLogin), for: .touchUpInside)
-        GoalFiveButton.addTarget(self, action: #selector(GoalFiveLogin), for: .touchUpInside)
+        ContinueButton.addTarget(self, action: #selector(Continue), for: .touchUpInside)
+        
+        GoalOneButton.addTarget(self, action: #selector(Goal1), for: .touchUpInside)
+        GoalTwoButton.addTarget(self, action: #selector(Goal2), for: .touchUpInside)
+        GoalThreeButton.addTarget(self, action: #selector(Goal3), for: .touchUpInside)
+        GoalFourButton.addTarget(self, action: #selector(Goal4), for: .touchUpInside)
+        GoalFiveButton.addTarget(self, action: #selector(Goal5), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             
@@ -150,27 +165,60 @@ class GoalPage: UIViewController {
             ImgGoal.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             ImgGoal.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             //ImgGoal.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -260),
+            
+            ContinueButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 480),
+            ContinueButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 60),
+            ContinueButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -60),
         ])
         
     }
     
-    @objc func GoalOneLogin(){
-            navigationController?.pushViewController(ThankYouPage(), animated: true)
+    @objc func Continue(){
+            navigationController?.pushViewController(BMIController(), animated: true)
         }
     
-    @objc func GoalTwoLogin(){
-            navigationController?.pushViewController(ThankYouPage(), animated: true)
+    @objc func Goal1(){
+        GoalOneButton.backgroundColor = .brown
+        GoalTwoButton.backgroundColor = .gray
+        GoalThreeButton.backgroundColor = .gray
+        GoalFourButton.backgroundColor = .gray
+        GoalFiveButton.backgroundColor = .gray
+            
+        }
+        
+    @objc func Goal2(){
+        GoalOneButton.backgroundColor = .gray
+        GoalTwoButton.backgroundColor = .brown
+        GoalThreeButton.backgroundColor = .gray
+        GoalFourButton.backgroundColor = .gray
+        GoalFiveButton.backgroundColor = .gray
+            
         }
     
-    @objc func GoalThreeLogin(){
-            navigationController?.pushViewController(ThankYouPage(), animated: true)
+    @objc func Goal3(){
+        GoalOneButton.backgroundColor = .gray
+        GoalTwoButton.backgroundColor = .gray
+        GoalThreeButton.backgroundColor = .brown
+        GoalFourButton.backgroundColor = .gray
+        GoalFiveButton.backgroundColor = .gray
+            
+        }
+        
+    @objc func Goal4(){
+        GoalOneButton.backgroundColor = .gray
+        GoalTwoButton.backgroundColor = .gray
+        GoalThreeButton.backgroundColor = .gray
+        GoalFourButton.backgroundColor = .brown
+        GoalFiveButton.backgroundColor = .gray
+            
         }
     
-    @objc func GoalFourLogin(){
-            navigationController?.pushViewController(ThankYouPage(), animated: true)
-        }
-    
-    @objc func GoalFiveLogin(){
-            navigationController?.pushViewController(ThankYouPage(), animated: true)
+    @objc func Goal5(){
+        GoalOneButton.backgroundColor = .gray
+        GoalTwoButton.backgroundColor = .gray
+        GoalThreeButton.backgroundColor = .gray
+        GoalFourButton.backgroundColor = .gray
+        GoalFiveButton.backgroundColor = .brown
+            
         }
 }

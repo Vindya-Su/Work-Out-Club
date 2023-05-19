@@ -50,9 +50,10 @@ class BMIController: UIViewController {
         label.layer.borderWidth = 1.0
         label.layer.cornerRadius = 10
         label.font = .systemFont(ofSize: 28)
-        label.textColor = .black
-        label.text = " v"
-        label.textAlignment = .center
+        //label.textColor = .black
+        //label.text = " v"
+        label.clipsToBounds = true
+        label.textAlignment = .left
         return label
     }()
     
@@ -86,7 +87,7 @@ class BMIController: UIViewController {
         button.setTitle("Continue", for: .normal)
         button.backgroundColor = .brown
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
+        button.titleLabel?.font = .systemFont(ofSize: 22, weight: .bold)
         button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -96,8 +97,39 @@ class BMIController: UIViewController {
         super.viewDidLoad()
         
         setUi()
+        calBMI()
     }
     
+    func calBMI(){
+        let data = UserDefaults.standard
+        
+        let w = data.double(forKey: "weight")
+        let h = data.double(forKey: "height")
+        
+        let bmi = (w/h/h) * 10000
+        
+        let bmiStr = String(format: "%.2f", bmi)
+        
+        data.set(bmiStr, forKey: "bmi")
+        
+        //let bm = data.string(forKey: "bmi")
+        
+        labelBmi.text = String(bmiStr)
+        
+        if(bmi<18.5){
+            print("underweight")
+        }
+        else if(bmi<24.9){
+            print("normal")
+        }
+        else  if(bmi<34.9){
+            print("overweight")
+        }
+        else{
+            print("weight:",w,":","heught:",h,"bmi",bmi)
+        }
+        
+    }
     func setUi(){
         view.backgroundColor = .white
         view.addSubview(progressView)
@@ -129,8 +161,8 @@ class BMIController: UIViewController {
         labeText.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
         
         labelBmi.topAnchor.constraint(equalTo: labeText.topAnchor, constant: 40),
-        labelBmi.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 80),
-        labelBmi.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -80),
+        labelBmi.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 100),
+        labelBmi.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -100),
         
         labeTextTwo.topAnchor.constraint(equalTo: labelBmi.topAnchor, constant: 70),
         labeTextTwo.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
@@ -146,6 +178,6 @@ class BMIController: UIViewController {
         
     }
     @objc func Continue(){
-            navigationController?.pushViewController(GoalPage(), animated: true)
+            navigationController?.pushViewController(ThankYouPage(), animated: true)
         }
 }

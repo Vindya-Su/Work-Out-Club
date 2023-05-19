@@ -39,7 +39,7 @@ class ThankYouPage: UIViewController {
         button.setTitle("Continue", for: .normal)
         button.backgroundColor = .brown
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
+        button.titleLabel?.font = .systemFont(ofSize: 22, weight: .bold)
         button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -82,6 +82,39 @@ class ThankYouPage: UIViewController {
     }
     
     @objc func Continue(){
-            navigationController?.pushViewController(GoalPage(), animated: true)
-        }
+            //navigationController?.pushViewController(GoalPage(), animated: true)
+        let tabBarController = UITabBarController()
+                
+                
+                
+                let home = UINavigationController(rootViewController: TableView())
+                let schedule = UINavigationController(rootViewController: SchedulePage())
+                let progress = UINavigationController(rootViewController: ProgressPage())
+                let profile = UINavigationController(rootViewController: ProfilePage())
+                
+                home.title = "Home"
+                schedule.title = "Schedule"
+                progress.title = "Progress"
+                profile.title = "Profile"
+                
+                tabBarController.setViewControllers([home,schedule,progress,profile], animated: false)
+                
+                guard let items = tabBarController.tabBar.items else {
+                    return
+                }
+                
+                let images = ["house","calendar","chart.xyaxis.line","person.crop.circle"]
+            
+                for x in 0..<items.count {
+                    items[x].image = UIImage(systemName: images[x])
+                    items[x].badgeColor = UIColor.orange
+                }
+                
+                let tabBarAppearance = UITabBar.appearance()
+                tabBarAppearance.backgroundColor = .white
+                tabBarAppearance.tintColor = .orange
+                
+                tabBarController.modalPresentationStyle = .fullScreen
+                present(tabBarController, animated: true)
+                    }
 }

@@ -108,17 +108,24 @@ class SignIn: UIViewController {
             GmailLoginButton.topAnchor.constraint(equalTo: ImageSignUp.topAnchor, constant: 290),
             GmailLoginButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 60),
             GmailLoginButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -60),
-            GmailLoginButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -360),
+            //GmailLoginButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -360),
+            GmailLoginButton.heightAnchor.constraint(equalToConstant: 40),
+            GmailLoginButton.widthAnchor.constraint(equalToConstant: 20),
             
             AppleIdLoginButton.topAnchor.constraint(equalTo: GmailLoginButton.topAnchor, constant: 65),
             AppleIdLoginButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 60),
             AppleIdLoginButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -60),
-            AppleIdLoginButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -295),
+            //AppleIdLoginButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -295),
+            AppleIdLoginButton.heightAnchor.constraint(equalToConstant: 40),
+            AppleIdLoginButton.widthAnchor.constraint(equalToConstant: 20),
             
             SignUpButton.topAnchor.constraint(equalTo: AppleIdLoginButton.topAnchor, constant: 150),
             SignUpButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 60),
             SignUpButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -60),
-            SignUpButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -140),
+            //SignUpButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -140),
+            SignUpButton.heightAnchor.constraint(equalToConstant: 40),
+            SignUpButton.widthAnchor.constraint(equalToConstant: 30),
+            
             
             hStack.topAnchor.constraint(equalTo: SignUpButton.topAnchor, constant: 60),
             hStack.centerXAnchor.constraint(equalTo: view.centerXAnchor)
