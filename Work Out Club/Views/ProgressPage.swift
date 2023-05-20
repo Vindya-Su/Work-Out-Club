@@ -8,14 +8,12 @@
 import UIKit
 
 class ProgressPage: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
     }
-    
-
-    
-
+   
 }

@@ -14,8 +14,4 @@ class SchedulePage: UIViewController {
 
         
     }
-    
-
-    
-
 }

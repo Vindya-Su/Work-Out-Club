@@ -63,7 +63,7 @@ class GoalPage: UIViewController {
     let GoalFourButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("  Improved fitness and endurance", for: .normal)
+        button.setTitle("  Improved fitness", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 18.5)
         button.backgroundColor = UIColor(red: 201/255, green: 193/255, blue: 197/255, alpha: 0.27)
         button.setTitleColor(.black, for: .normal)

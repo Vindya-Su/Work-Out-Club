@@ -25,6 +25,7 @@
 		209630772A16A87600B678C8 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209630762A16A87600B678C8 /* ProfilePage.swift */; };
 		209630792A17429500B678C8 /* SchedulePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209630782A17429500B678C8 /* SchedulePage.swift */; };
 		2096307B2A1742CE00B678C8 /* ProgressPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2096307A2A1742CE00B678C8 /* ProgressPage.swift */; };
+		2096307D2A191E6100B678C8 /* CustomCellSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2096307C2A191E6100B678C8 /* CustomCellSchedule.swift */; };
 		20B6A2E229D17B9D00CFC7D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6A2E129D17B9D00CFC7D8 /* AppDelegate.swift */; };
 		20B6A2E429D17B9D00CFC7D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6A2E329D17B9D00CFC7D8 /* SceneDelegate.swift */; };
 		20B6A2E629D17B9D00CFC7D8 /* ScreenStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6A2E529D17B9D00CFC7D8 /* ScreenStart.swift */; };
@@ -50,6 +51,7 @@
 		209630762A16A87600B678C8 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		209630782A17429500B678C8 /* SchedulePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePage.swift; sourceTree = "<group>"; };
 		2096307A2A1742CE00B678C8 /* ProgressPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPage.swift; sourceTree = "<group>"; };
+		2096307C2A191E6100B678C8 /* CustomCellSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellSchedule.swift; sourceTree = "<group>"; };
 		20B6A2DE29D17B9D00CFC7D8 /* Work Out Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Work Out Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B6A2E129D17B9D00CFC7D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20B6A2E329D17B9D00CFC7D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				20B6A2EC29D17B9E00CFC7D8 /* LaunchScreen.storyboard */,
 				20B6A2EF29D17B9E00CFC7D8 /* Info.plist */,
 				209630722A1684C900B678C8 /* CustomCell.swift */,
+				2096307C2A191E6100B678C8 /* CustomCellSchedule.swift */,
 			);
 			path = "Work Out Club";
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2096307D2A191E6100B678C8 /* CustomCellSchedule.swift in Sources */,
 				209630772A16A87600B678C8 /* ProfilePage.swift in Sources */,
 				200479C729D5719700990591 /* FifthPage.swift in Sources */,
 				200479C529D55F9E00990591 /* FourthPage.swift in Sources */,
